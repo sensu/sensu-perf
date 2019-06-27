@@ -166,7 +166,9 @@ Create Sensu checks that target the newly created Agent sessions (from
 backend1):
 
 _NOTE: It is recommended to create 4 checks at a time, one for each
-subscription, this gives etcd some time to allocate pages etc._
+subscription, this gives etcd some time to allocate pages etc. After
+etcd has had a chance to "warm up", it's generally safe to be more
+aggresive with check creation._
 
 ```
 ssh backend1
@@ -181,3 +183,7 @@ sensuctl create -f check3.yml
 
 sensuctl create -f check4.yml
 ```
+
+Use Grafana to observe system performance. Watch service logs for any
+red flags (e.g. increased etcd range request times). Do not forget to
+collect profiles when you observe anomalous behaviour!
