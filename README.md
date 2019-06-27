@@ -7,6 +7,17 @@ performance regressions.
 
 ## The Sensu Testbed
 
+The Sensu Testbed is comprised of five bare metal hosts and two
+gigabit ethernet network switches. Bare metal is used for increased
+control and consistency between testing runs (single tenant, no
+hypervisor, etc.). One host is for running thousands of Sensu Agent
+sessions (A1), three hosts are for running the Sensu Backend cluster
+(B1, B2, B3), and the final host runs Postgres for the Sensu
+Enterprise Event Store (P). One of the network switches is used for
+SSH access to each node and the Sensu Agent sessions traffic. The
+other network switch is used for Sensu Backend etcd and Postgres
+traffic.
+
 ![Network Diagram](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/network.png)
 
 ### Hardware
