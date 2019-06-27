@@ -104,8 +104,6 @@ cards, round-robin bonded (bond0), to increase its network bandwidth.
 #### Postgres
 
 ```
-max_connections = 200
-
 shared_buffers = 10GB
 
 maintenance_work_mem = 1GB
@@ -113,7 +111,7 @@ maintenance_work_mem = 1GB
 vacuum_cost_delay = 10ms
 vacuum_cost_limit = 10000
 
-bgwriter_delay = 10ms
+bgwriter_delay = 50ms
 bgwriter_lru_maxpages = 1000
 
 max_worker_processes = 8
