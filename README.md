@@ -98,8 +98,42 @@ cards, round-robin bonded (bond0), to increase its network bandwidth.
 - An Intel 660p 512GB SSD for the Postgres wal, XFS, 4k block size,
   mounted with noatime and nodiratime
 
-- The Postgres host uses a Samsung 970 PRO 1TB SSD for the Postgres
-  database, XFS, 4k block size, mounted with noatime and nodiratime
+- A Samsung 970 PRO 1TB SSD for the Postgres database, XFS, 4k block
+  size, mounted with noatime and nodiratime
+
+#### Postgres
+
+```
+max_connections = 200
+
+shared_buffers = 10GB
+
+maintenance_work_mem = 1GB
+
+vacuum_cost_delay = 10ms
+vacuum_cost_limit = 10000
+
+bgwriter_delay = 10ms
+bgwriter_lru_maxpages = 1000
+
+max_worker_processes = 8
+max_parallel_maintenance_workers = 2
+max_parallel_workers_per_gather = 2
+max_parallel_workers = 8
+
+synchronous_commit = off
+
+wal_sync_method = fdatasync
+wal_writer_delay = 5000ms
+max_wal_size = 5GB
+min_wal_size = 1GB
+
+checkpoint_completion_target = 0.9
+
+autovacuum_naptime = 10s
+autovacuum_vacuum_scale_factor = 0.05
+autovacuum_analyze_scale_factor = 0.025
+```
 
 ### Sensu Backend Tuning
 
