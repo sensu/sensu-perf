@@ -7,7 +7,7 @@ performance regressions.
 
 ## The Sensu Testbed
 
-![Network Diagram][https://raw.githubusercontent.com/sensu/sensu-perf/master/images/network.png]
+![Network Diagram](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/network.png)
 
 ### Hardware
 
