@@ -14,10 +14,10 @@ hypervisor, etc.). One host is for running thousands of Sensu Agent
 sessions (A1), three hosts are for running the Sensu Backend cluster
 (B1, B2, B3), and the final host runs Postgres for the Sensu
 Enterprise Event Store (P). One of the network switches is used for
-SSH access to each node and the Sensu Agent sessions traffic. The
-other network switch is used for Sensu Backend etcd and Postgres
-traffic. The Postgres host uses three 1 gigabit ethernet cards,
-round-robin bonded (bond0), to increase its network bandwidth.
+SSH access to each host and the Sensu Agent sessions traffic to the
+Backends. The other network switch is used for Sensu Backend etcd and
+Postgres traffic. The Postgres host uses three 1 gigabit ethernet
+cards, round-robin bonded (bond0), to increase its network bandwidth.
 
 ![Network Diagram](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/network.png)
 
@@ -84,3 +84,100 @@ round-robin bonded (bond0), to increase its network bandwidth.
 - Two Ubiquiti UniFi 8 Port 60W Switches (US-8-60W)
 
 - Eleven Cat 6 5ft Ethernet Cables
+
+## Testing Process
+
+The following steps are intended for Sensu Engineering use, they are shared here for transparency.
+
+Wake the Testbed from the SSH jump host:
+
+```
+./wake.sh
+```
+
+Start up Postgres and do some cleanup:
+
+```
+ssh postgres
+
+systemctl start postgresql-11.service
+
+systemctl status postgresql-11.service
+
+psql 'user=sensu password=P@ssw0rd!'
+
+delete from events;
+
+VACUUM FULL;
+
+\q
+```
+
+Wipe Sensu Backends and start them up (do on all three):
+
+```
+ssh backend1
+
+rm -rf /mnt/data/sensu/sensu-backend
+
+systemctl start sensu-backend.service
+
+systemctl status sensu-backend.service
+```
+
+Configure the Enterprise license and Postgres Event Store (from backend1):
+
+```
+ssh backend1
+
+sensuctl configure
+
+sensuctl create -f sensu-perf/license.json
+
+sensuctl create -f sensu-perf/postgres.yml
+```
+
+In either separate SSH sessions, tmux, or screen panes run (from agents1):
+
+```
+ssh agents1
+
+cd sensu-perf/tests/3-backends-20k-agents-4-subs-pg/
+
+./loadit1.sh
+```
+
+```
+./loadit2.sh
+```
+
+```
+./loadit3.sh
+```
+
+```
+./loadit4.sh
+```
+
+The loadit tool must continue to run for the whole duration of the
+performance test (do not interrupt).
+
+Create Sensu checks that target the newly created Agent sessions (from
+backend1):
+
+_NOTE: It is recommended to create 4 checks at a time, one for each
+subscription, this gives etcd some time to allocate pages etc._
+
+```
+ssh backend1
+
+cd sensu-perf/tests/3-backends-20k-agents-4-subs-pg/checks
+
+sensuctl create -f check1.yml
+
+sensuctl create -f check2.yml
+
+sensuctl create -f check3.yml
+
+sensuctl create -f check4.yml
+```
