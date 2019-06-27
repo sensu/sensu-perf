@@ -16,7 +16,8 @@ sessions (A1), three hosts are for running the Sensu Backend cluster
 Enterprise Event Store (P). One of the network switches is used for
 SSH access to each node and the Sensu Agent sessions traffic. The
 other network switch is used for Sensu Backend etcd and Postgres
-traffic.
+traffic. The Postgres host uses three 1 gigabit ethernet cards,
+round-robin bonded (bond0), to increase its network bandwidth.
 
 ![Network Diagram](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/network.png)
 
