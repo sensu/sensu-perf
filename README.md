@@ -39,11 +39,11 @@ TODO: Diagram
 
 - Two Intel 660p Series M.2 PCIe 512GB Solid State Drives
 
-- Intel Gigabit CT PCI-E Network Card
+- Intel Gigabit CT PCIe Network Card
 
 - GeForce GT 710, 1GB DDR3
 
-- Noctua NH-U12S TR4-SP3 CPU cooler
+- Noctua NH-U12S TR4-SP3 CPU Cooler
 
 - Corsair CX Series 650W Power Supply
 
@@ -57,18 +57,18 @@ TODO: Diagram
 
 - Corsair Vengeance LPX 16GB DDR4 2666MHz CL16 Dual Channel Kit (2x 8GB)
 
-- Two Intel 660p Series M.2 PCI-E 512GB Solid State Drives
+- Two Intel 660p Series M.2 PCIe 512GB Solid State Drives
 
-- Samsung 970 PRO NVMe M.2 PCI-E 1TB Solid State Drive
+- Samsung 970 PRO NVMe M.2 PCIe 1TB Solid State Drive
 
-- Three Intel Gigabit CT PCI-E Network Cards
+- Three Intel Gigabit CT PCIe Network Cards
 
 - GeForce GT 710, 1GB DDR3
 
-- Noctua NH-U12S TR4-SP3 CPU cooler
+- Noctua NH-U12S TR4-SP3 CPU Cooler
 
 #### Network
 
-- Two Ubiquiti UniFi Switch 8 60W
+- Two Ubiquiti UniFi 8 Port 60W Switches (US-8-60W)
 
 - Eleven Cat 6 5ft Ethernet Cables
