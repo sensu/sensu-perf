@@ -89,6 +89,27 @@ cards, round-robin bonded (bond0), to increase its network bandwidth.
 
 - Eleven Cat 6 5ft Ethernet Cables
 
+### Postgres Tuning
+
+#### System
+
+- An Intel 660p 512GB SSD for the root and var partitions
+
+- An Intel 660p 512GB SSD for the Postgres wal, XFS, 4k block size,
+  mounted with noatime and nodiratime
+
+- The Postgres host uses a Samsung 970 PRO 1TB SSD for the Postgres
+  database, XFS, 4k block size, mounted with noatime and nodiratime
+
+### Sensu Backend Tuning
+
+#### System
+
+- An Intel 660p 512GB SSD for the root and var partitions
+
+- An Intel 660p 512GB SSD for the Sensu Backend embedded etcd (wal and
+  data), ext4 (defaults)
+
 ## Testing Process
 
 The following steps are intended for Sensu Engineering use, they are shared here for transparency.
