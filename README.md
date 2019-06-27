@@ -79,6 +79,10 @@ cards, round-robin bonded (bond0), to increase its network bandwidth.
 
 - Noctua NH-U12S TR4-SP3 CPU Cooler
 
+- Antec Earthwatts EA-500D 500w Power Supply
+
+- Antec Design Sonata Mid Tower ATX Case
+
 #### Network
 
 - Two Ubiquiti UniFi 8 Port 60W Switches (US-8-60W)
