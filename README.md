@@ -186,4 +186,5 @@ sensuctl create -f check4.yml
 
 Use Grafana to observe system performance. Watch service logs for any
 red flags (e.g. increased etcd range request times). Do not forget to
-collect profiles when you observe anomalous behaviour!
+collect profiles when you observe anomalous behaviour! Use Grafana to
+compare the test results with previous test runs.
