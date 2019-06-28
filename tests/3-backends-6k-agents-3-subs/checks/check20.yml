@@ -1,0 +1,25 @@
+type: CheckConfig
+api_version: core/v2
+metadata:
+  name: check20
+  namespace: default
+spec:
+  check_hooks: null
+  command: '!sensu_test_check!'
+  env_vars: null
+  handlers: []
+  high_flap_threshold: 0
+  interval: 10
+  low_flap_threshold: 0
+  output_metric_format: ""
+  output_metric_handlers: null
+  proxy_entity_name: ""
+  publish: true
+  round_robin: false
+  runtime_assets: null
+  stdin: false
+  subdue: null
+  subscriptions:
+  - large_cluster_test_2
+  timeout: 0
+  ttl: 0
