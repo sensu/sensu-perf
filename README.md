@@ -247,3 +247,15 @@ Use Grafana to observe system performance. Watch service logs for any
 red flags (e.g. increased etcd range request times). Do not forget to
 collect profiles when you observe anomalous behaviour! Use Grafana to
 compare the test results with previous test runs.
+
+## Test Results
+
+### The Sensu Testbed
+
+Using the
+[3-backends-20k-agents-4-subs-pg](https://github.com/sensu/sensu-perf/tree/master/tests/3-backends-20k-agents-4-subs-pg)
+assets and configuration, the Sensu Testbed was able to comfortably
+handle 40,000 Sensu Agent connections (and keepalives) and process
+over 36,000 events per second. The testbed could process over 40,000
+events per second, however, the cluster would periodically throttle
+Agent check executions with back pressure.
