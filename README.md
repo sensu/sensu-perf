@@ -255,7 +255,7 @@ compare the test results with previous test runs.
 Using the
 [3-backends-20k-agents-4-subs-pg](https://github.com/sensu/sensu-perf/tree/master/tests/3-backends-20k-agents-4-subs-pg)
 assets and configuration, the Sensu Testbed was able to comfortably
-handle *40,000 Sensu Agent connections* (and their keepalives) and
-process over *36,000 events per second*. The testbed *could process
-over 40,000 events per second*, however, the cluster would
+handle **40,000 Sensu Agent connections** (and their keepalives) and
+process over **36,000 events per second**. The testbed **could process
+over 40,000 events per second**, however, the cluster would
 periodically throttle Agent check executions with back pressure.
