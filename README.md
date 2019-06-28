@@ -104,6 +104,8 @@ cards, round-robin bonded (bond0), to increase its network bandwidth.
 #### Postgres
 
 ```
+max_connections = 200
+
 shared_buffers = 10GB
 
 maintenance_work_mem = 1GB
