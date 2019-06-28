@@ -259,3 +259,13 @@ handle **40,000 Sensu Agent connections** (and their keepalives) and
 process over **36,000 events per second**. The testbed **could process
 over 40,000 events per second**, however, the cluster would
 periodically throttle Agent check executions with back pressure.
+
+![Events](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/events.png)
+
+![Events](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/backend1.png)
+
+![Events](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/etcd1.png)
+
+![Events](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/etcd2.png)
+
+![Events](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/postgres.png)
