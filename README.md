@@ -252,7 +252,7 @@ compare the test results with previous test runs.
 
 ### The Sensu Testbed
 
-#### With Postgres Event Storage
+#### Postgres Event Storage
 
 Using the
 [3-backends-20k-agents-4-subs-pg](https://github.com/sensu/sensu-perf/tree/master/tests/3-backends-20k-agents-4-subs-pg)
@@ -262,12 +262,34 @@ process over **36,000 events per second**. The testbed **could process
 over 40,000 events per second**, however, the cluster would
 periodically throttle Agent check executions with back pressure.
 
-![events](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/events.png)
+![events](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/with-psql/events.png)
 
-![backend1](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/backend1.png)
+![backend1](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/with-psql/backend1.png)
 
-![etcd1](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/etcd1.png)
+![etcd1](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/with-psql/etcd1.png)
 
-![etcd3](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/etcd2.png)
+![etcd2](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/with-psql/etcd2.png)
 
-![postgres](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/postgres.png)
+![postgres](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/with-psql/postgres.png)
+
+#### Embedded Etcd Event Storage
+
+Using the
+[3-backends-6k-agents-3-subs](https://github.com/sensu/sensu-perf/tree/master/tests/3-backends-6k-agents-3-subs)
+assets and configuration, the Sensu Testbed was able to comfortably
+handle **12,000 Sensu Agent connections** (and their keepalives) and
+process over **8,500 events per second**.
+
+![events1](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/embedded-etcd/events1.png)
+
+![events2](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/embedded-etcd/events2.png)
+
+![backend1](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/embedded-etcd/backend1.png)
+
+![backend1](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/embedded-etcd/backend2.png)
+
+![backend1](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/embedded-etcd/backend3.png)
+
+![etcd1](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/embedded-etcd/etcd1.png)
+
+![etcd2](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/embedded-etcd/etcd2.png)
