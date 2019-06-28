@@ -252,6 +252,8 @@ compare the test results with previous test runs.
 
 ### The Sensu Testbed
 
+#### With Postgres Event Storage
+
 Using the
 [3-backends-20k-agents-4-subs-pg](https://github.com/sensu/sensu-perf/tree/master/tests/3-backends-20k-agents-4-subs-pg)
 assets and configuration, the Sensu Testbed was able to comfortably
@@ -260,12 +262,12 @@ process over **36,000 events per second**. The testbed **could process
 over 40,000 events per second**, however, the cluster would
 periodically throttle Agent check executions with back pressure.
 
-![Events](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/events.png)
+![events](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/events.png)
 
-![Events](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/backend1.png)
+![backend1](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/backend1.png)
 
-![Events](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/etcd1.png)
+![etcd1](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/etcd1.png)
 
-![Events](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/etcd2.png)
+![etcd3](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/etcd2.png)
 
-![Events](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/postgres.png)
+![postgres](https://raw.githubusercontent.com/sensu/sensu-perf/master/images/screenshots/postgres.png)
