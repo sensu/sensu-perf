@@ -144,6 +144,8 @@ autovacuum_analyze_scale_factor = 0.025
 - An Intel 660p 512GB SSD for the Sensu Backend embedded etcd (wal and
   data), ext4 (defaults)
 
+- Disabled TCP syn cookies (net.ipv4.tcp_syncookies = 0)
+
 ## Testing Process
 
 The following steps are intended for Sensu Engineering use, they are shared here for transparency.
