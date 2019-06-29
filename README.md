@@ -89,11 +89,15 @@ cards, round-robin bonded (bond0), to increase its network bandwidth.
 
 - Eleven Cat 6 5ft Ethernet Cables
 
+### General System Tuning
+
+- An Intel 660p 512GB SSD for the root and var partitions
+
+- Disabled TCP syn cookies (net.ipv4.tcp_syncookies = 0)
+
 ### Postgres Tuning
 
 #### System
-
-- An Intel 660p 512GB SSD for the root and var partitions
 
 - An Intel 660p 512GB SSD for the Postgres wal, XFS, 4k block size,
   mounted with noatime and nodiratime
@@ -139,12 +143,8 @@ autovacuum_analyze_scale_factor = 0.025
 
 #### System
 
-- An Intel 660p 512GB SSD for the root and var partitions
-
 - An Intel 660p 512GB SSD for the Sensu Backend embedded etcd (wal and
   data), ext4 (defaults)
-
-- Disabled TCP syn cookies (net.ipv4.tcp_syncookies = 0)
 
 ## Testing Process
 
