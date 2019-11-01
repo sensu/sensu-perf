@@ -1,0 +1,5 @@
+postgresql_databases:
+  - name: sensu
+postgresql_users:
+  - name: sensu
+    password: P@ssw0rd!
