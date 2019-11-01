@@ -1,0 +1,33 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: geerlingguy
+  description: PostgreSQL server for Linux.
+  company: "Midwestern Mac, LLC"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.4
+  platforms:
+    - name: EL
+      versions:
+        - 6
+        - 7
+    - name: Fedora
+      versions:
+        - 29
+        - 30
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+    - name: Debian
+      versions:
+        - wheezy
+        - jessie
+        - stretch
+        - buster
+  galaxy_tags:
+    - database
+    - postgresql
+    - postgres
+    - rdbms
