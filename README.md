@@ -146,7 +146,7 @@ autovacuum_analyze_scale_factor = 0.025
 - An Intel 660p 512GB SSD for the Sensu Backend embedded etcd (wal and
   data), ext4 (defaults)
 
-## Testing Process
+## Testing Process (Postgres)
 
 The following steps are intended for Sensu Engineering use, they are shared here for transparency.
 
@@ -180,18 +180,28 @@ Wipe Sensu Backends and start them up (do on all three):
 ssh backend1
 
 rm -rf /mnt/data/sensu/sensu-backend
+```
 
+If the version you're testing is not installed:
+```
+./backend_upgrade.sh $SHA $BRANCH
+```
+
+If the version you're testing is already installed:
+```
 systemctl start sensu-backend.service
 
 systemctl status sensu-backend.service
 ```
 
-Configure the Enterprise license and Postgres Event Store (from backend1):
+Initialize the cluster admin user and configure the Enterprise license and Postgres Event Store (from backend1):
 
 ```
 ssh backend1
 
-sensuctl configure
+sensu-backend init --cluster-admin-username admin --cluster-admin-password P@ssw0rd!
+
+sensuctl configure -n --username admin --password P@ssw0rd!
 
 sensuctl create -f sensu-perf/license.json
 
@@ -249,6 +259,12 @@ Use Grafana to observe system performance. Watch service logs for any
 red flags (e.g. increased etcd range request times). Do not forget to
 collect profiles when you observe anomalous behaviour! Use Grafana to
 compare the test results with previous test runs.
+
+## Testing Process (etcd)
+
+Perform the same instructions as Postgres, without configuring
+`postgres.yml`. The agent loadit scripts and test checks live in
+`sensu-perf/tests/3-backends-14k-agents-4-subs/`.
 
 ## Test Results
 
