@@ -213,7 +213,7 @@ In either separate SSH sessions, tmux, or screen panes run (from agents1):
 ```
 ssh agents1
 
-cd sensu-perf/tests/3-backends-20k-agents-4-subs-pg/
+cd sensu-perf/tests/3-backends-40k-agents-4-subs-pg/
 
 ./loadit1.sh
 ```
@@ -244,7 +244,7 @@ aggresive with check creation._
 ```
 ssh backend1
 
-cd sensu-perf/tests/3-backends-20k-agents-4-subs-pg/checks
+cd sensu-perf/tests/3-backends-40k-agents-4-subs-pg/checks
 
 sensuctl create -f check1.yml
 
