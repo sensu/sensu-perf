@@ -210,7 +210,8 @@ sensuctl create -f sensu-perf/license.json
 sensuctl create -f sensu-perf/postgres.yml
 ```
 
-In either separate SSH sessions, tmux, or screen panes, on agents1 run one of the following scripts:
+In either separate SSH sessions, tmux, or screen panes, on agents1 run all of the following scripts,
+each one in a seperate instance:
 
 ```
 ssh agents1
