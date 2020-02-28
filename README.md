@@ -150,7 +150,8 @@ autovacuum_analyze_scale_factor = 0.025
 
 The following steps are intended for Sensu Engineering use, they are shared here for transparency.
 
-**Check the pins in the #engineering channel in Slack for the IP of the SSH jump host.**
+**Connect to the SSH jump host via DNS: `spdc.sensu.io`
+If that fails check the pins in the #engineering channel in Slack for the IP**
 
 Wake the Testbed from the SSH jump host:
 
@@ -262,7 +263,7 @@ sensuctl create -f check4.yml
 ...
 ```
 
-Use Grafana to observe system performance. Grafana runs on port 300 of the SSH jump host. Watch service logs for any
+Use Grafana to observe system performance. Grafana runs on port 3000 of the SSH jump host. Watch service logs for any
 red flags (e.g. increased etcd range request times). Do not forget to
 collect profiles when you observe anomalous behaviour! Use Grafana to
 compare the test results with previous test runs by comparing with the images listed here, and the last run posted
