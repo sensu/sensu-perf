@@ -150,8 +150,8 @@ autovacuum_analyze_scale_factor = 0.025
 
 The following steps are intended for Sensu Engineering use, they are shared here for transparency.
 
-**Connect to the SSH jump host via DNS: `spdc.sensu.io`
-If that fails check the pins in the #engineering channel in Slack for the IP**
+**Connect to the SSH jump host via DNS: `spdc.sensu.io`**.
+If that fails check the pins in the #engineering channel in Slack for the IP
 
 Wake the Testbed from the SSH jump host:
 
