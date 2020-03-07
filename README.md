@@ -150,6 +150,9 @@ autovacuum_analyze_scale_factor = 0.025
 
 The following steps are intended for Sensu Engineering use, they are shared here for transparency.
 
+**Connect to the SSH jump host via DNS: `spdc.sensu.io`**.
+If that fails check the pins in the #engineering channel in Slack for the IP
+
 Wake the Testbed from the SSH jump host:
 
 ```
@@ -161,9 +164,9 @@ Start up Postgres and do some cleanup:
 ```
 ssh postgres
 
-systemctl start postgresql-11.service
+systemctl start postgresql
 
-systemctl status postgresql-11.service
+systemctl status postgresql
 
 psql 'user=sensu password=P@ssw0rd!'
 
@@ -174,7 +177,7 @@ VACUUM FULL;
 \q
 ```
 
-Wipe Sensu Backends and start them up (do on all three):
+Wipe Sensu Backends and start them up **(do these steps on all three backends)**:
 
 ```
 ssh backend1
@@ -208,7 +211,8 @@ sensuctl create -f sensu-perf/license.json
 sensuctl create -f sensu-perf/postgres.yml
 ```
 
-In either separate SSH sessions, tmux, or screen panes run (from agents1):
+In either separate SSH sessions, tmux, or screen panes, on agents1 run all of the following scripts,
+each one in a seperate instance:
 
 ```
 ssh agents1
@@ -234,7 +238,7 @@ The loadit tool must continue to run for the whole duration of the
 performance test (do not interrupt).
 
 Create Sensu checks that target the newly created Agent sessions (from
-backend1):
+backend1). Create all the checks in the folder:
 
 _NOTE: It is recommended to create 4 checks at a time, one for each
 subscription, this gives etcd some time to allocate pages etc. After
@@ -246,6 +250,8 @@ ssh backend1
 
 cd sensu-perf/tests/3-backends-40k-agents-4-subs-pg/checks
 
+ls
+
 sensuctl create -f check1.yml
 
 sensuctl create -f check2.yml
@@ -253,16 +259,21 @@ sensuctl create -f check2.yml
 sensuctl create -f check3.yml
 
 sensuctl create -f check4.yml
+
+...
 ```
 
-Use Grafana to observe system performance. Watch service logs for any
+Use Grafana to observe system performance. Grafana runs on port 3000 of the SSH jump host. Watch service logs for any
 red flags (e.g. increased etcd range request times). Do not forget to
 collect profiles when you observe anomalous behaviour! Use Grafana to
-compare the test results with previous test runs.
+compare the test results with previous test runs by comparing with the images listed here, and the last run posted
+in the Release Checklist.
+
+** Allow the tests to run for an hour or so before continuing. **
 
 ## Testing Process (etcd)
 
-Perform the same instructions as Postgres, without configuring
+Perform the same instructions as testing Postgres, without configuring
 `postgres.yml`. The agent loadit scripts and test checks live in
 `sensu-perf/tests/3-backends-14k-agents-4-subs/`.
 
