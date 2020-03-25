@@ -170,7 +170,9 @@ systemctl status postgresql
 
 psql 'user=sensu password=P@ssw0rd!'
 
-delete from events;
+drop table events;
+
+drop table migration_version;
 
 VACUUM FULL;
 
