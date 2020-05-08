@@ -278,6 +278,12 @@ Perform the same instructions as testing Postgres, without configuring
 `postgres.yml`. The agent loadit scripts and test checks live in
 `sensu-perf/tests/3-backends-14k-agents-4-subs/`.
 
+Shutdown the Testbed from the SSH jump host:
+
+```
+./shutdown.sh
+```
+
 ## Test Results
 
 ### The Sensu Testbed
