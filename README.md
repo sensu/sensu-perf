@@ -279,6 +279,12 @@ Perform the same instructions as testing Postgres, without configuring
 `postgres.yml`. The agent loadit scripts and test checks live in
 `sensu-perf/tests/3-backends-14k-agents-4-subs/`.
 
+Shutdown the Testbed from the SSH jump host:
+
+```
+./shutdown.sh
+```
+
 ## Capturing the results
 
 1. Open the [Google Drive Folder for Performance Testing](https://drive.google.com/drive/u/1/folders/1MxzFG2a5quvu4GlqAuvBDY1X4kM20rQ4)
