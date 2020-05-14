@@ -253,15 +253,16 @@ cd sensu-perf/tests/3-backends-40k-agents-4-subs-pg/checks
 
 ls
 
-sensuctl create -f check1.yml
-
-sensuctl create -f check2.yml
-
-sensuctl create -f check3.yml
-
-sensuctl create -f check4.yml
-
-...
+sensuctl create -f check1.yml && sensuctl create -f check2.yml && sensuctl create -f check3.yml && sensuctl create -f check4.yml
+sensuctl create -f check5.yml && sensuctl create -f check6.yml && sensuctl create -f check7.yml && sensuctl create -f check8.yml
+sensuctl create -f check9.yml && sensuctl create -f check10.yml && sensuctl create -f check11.yml && sensuctl create -f check12.yml
+sensuctl create -f check13.yml && sensuctl create -f check14.yml && sensuctl create -f check15.yml && sensuctl create -f check16.yml
+sensuctl create -f check17.yml && sensuctl create -f check18.yml && sensuctl create -f check19.yml && sensuctl create -f check20.yml
+sensuctl create -f check21.yml && sensuctl create -f check22.yml && sensuctl create -f check23.yml && sensuctl create -f check24.yml
+sensuctl create -f check25.yml && sensuctl create -f check26.yml && sensuctl create -f check27.yml && sensuctl create -f check28.yml
+sensuctl create -f check29.yml && sensuctl create -f check30.yml && sensuctl create -f check31.yml && sensuctl create -f check32.yml
+sensuctl create -f check33.yml && sensuctl create -f check34.yml && sensuctl create -f check35.yml && sensuctl create -f check36.yml
+sensuctl create -f check37.yml && sensuctl create -f check38.yml && sensuctl create -f check39.yml && sensuctl create -f check40.yml
 ```
 
 Use Grafana to observe system performance. Grafana runs on port 3000 of the SSH jump host. Watch service logs for any
@@ -283,6 +284,13 @@ Shutdown the Testbed from the SSH jump host:
 ```
 ./shutdown.sh
 ```
+
+## Capturing the results
+
+1. Open the [Google Drive Folder for Performance Testing](https://drive.google.com/drive/u/1/folders/1MxzFG2a5quvu4GlqAuvBDY1X4kM20rQ4)
+1. Update the summary Google Sheet document with the results (for both Postgres & etcd) with the maximum number of total processed events per second, during which Sensu was stable
+1. Create a new folder for the release and upload screenshots (for both Postgres & etcd)
+1. [Take a snapshot](https://grafana.com/docs/grafana/latest/reference/share_dashboard/#dashboard-snapshot) of the Grafana dashboard and save it under the same name as the Google Drive folder.
 
 ## Test Results
 
