@@ -168,6 +168,10 @@ systemctl start postgresql
 
 systemctl status postgresql
 
+systemctl start postgres-exporter.service
+
+systemctl status postgres-exporter.service
+
 psql 'user=sensu password=P@ssw0rd!'
 
 DROP TABLE events;
