@@ -239,8 +239,9 @@ cd sensu-perf/tests/3-backends-40k-agents-4-subs-pg/
 ./loadit4.sh
 ```
 
-The loadit tool must continue to run for the whole duration of the
-performance test (do not interrupt).
+The [loadit tool](https://github.com/sensu/sensu-go/tree/master/cmd/loadit) must
+continue to run for the whole duration of the performance test (do not
+interrupt).
 
 Create Sensu checks that target the newly created Agent sessions (from
 backend1). Create all the checks in the folder:
