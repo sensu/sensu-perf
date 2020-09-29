@@ -16,11 +16,12 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 1,
-  "iteration": 1562276001580,
+  "iteration": 1601411225727,
   "links": [],
   "panels": [
     {
       "collapsed": false,
+      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -37,13 +38,209 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 8,
         "w": 12,
         "x": 0,
         "y": 1
       },
+      "hiddenSeries": false,
+      "id": 53,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.3",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sensu_go_event_handler_duration",
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Event Latency",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "ms",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 1
+      },
+      "hiddenSeries": false,
+      "id": 34,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.3",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(rate(sensu_go_events_processed[1m]))",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Total processed events per second",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 9
+      },
+      "hiddenSeries": false,
       "id": 2,
       "legend": {
         "alignAsTable": true,
@@ -60,6 +257,7 @@
       "links": [],
       "nullPointMode": "null",
       "percentage": false,
+      "pluginVersion": "7.1.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -129,29 +327,38 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 1
+        "y": 9
       },
-      "id": 34,
+      "hiddenSeries": false,
+      "id": 50,
       "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "max": true,
+        "avg": false,
+        "current": false,
+        "max": false,
         "min": false,
         "show": true,
         "total": false,
-        "values": true
+        "values": false
       },
       "lines": true,
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
       "percentage": false,
+      "pluginVersion": "7.1.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -161,10 +368,9 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(rate(sensu_go_events_processed[1m]))",
+          "expr": "avg(etcd_debugging_mvcc_keys_total)",
           "format": "time_series",
           "intervalFactor": 1,
-          "legendFormat": "",
           "refId": "A"
         }
       ],
@@ -172,7 +378,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Total processed events per second",
+      "title": "Etcd total number of keys",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -214,13 +420,22 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 9
+        "y": 17
       },
+      "hiddenSeries": false,
       "id": 48,
       "legend": {
         "alignAsTable": true,
@@ -237,6 +452,7 @@
       "links": [],
       "nullPointMode": "null",
       "percentage": false,
+      "pluginVersion": "7.1.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -323,29 +539,43 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "fill": 1,
+      "datasource": "Prometheus",
+      "decimals": null,
+      "editable": true,
+      "error": false,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "grid": {},
       "gridPos": {
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 9
+        "y": 17
       },
-      "id": 50,
+      "hiddenSeries": false,
+      "id": 44,
       "legend": {
         "avg": false,
         "current": false,
         "max": false,
         "min": false,
-        "show": true,
+        "show": false,
         "total": false,
         "values": false
       },
       "lines": true,
-      "linewidth": 1,
+      "linewidth": 2,
       "links": [],
-      "nullPointMode": "null",
+      "nullPointMode": "connected",
       "percentage": false,
-      "pointradius": 2,
+      "pluginVersion": "7.1.3",
+      "pointradius": 5,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [],
@@ -354,21 +584,27 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "avg(etcd_debugging_mvcc_keys_total)",
+          "expr": "etcd_debugging_mvcc_db_total_size_in_bytes",
           "format": "time_series",
-          "intervalFactor": 1,
-          "refId": "A"
+          "hide": false,
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "{{instance}} DB Size",
+          "metric": "",
+          "refId": "A",
+          "step": 120
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Etcd total number of keys",
+      "title": "Etcd DB Size",
       "tooltip": {
+        "msResolution": false,
         "shared": true,
         "sort": 0,
-        "value_type": "individual"
+        "value_type": "cumulative"
       },
       "type": "graph",
       "xaxis": {
@@ -380,8 +616,7 @@
       },
       "yaxes": [
         {
-          "format": "short",
-          "label": null,
+          "format": "bytes",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -389,11 +624,10 @@
         },
         {
           "format": "short",
-          "label": null,
           "logBase": 1,
           "max": null,
           "min": null,
-          "show": true
+          "show": false
         }
       ],
       "yaxis": {
@@ -409,14 +643,22 @@
       "datasource": "Prometheus",
       "editable": true,
       "error": false,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 0,
+      "fillGradient": 0,
       "grid": {},
       "gridPos": {
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 17
+        "y": 25
       },
+      "hiddenSeries": false,
       "id": 30,
       "legend": {
         "avg": false,
@@ -432,6 +674,7 @@
       "links": [],
       "nullPointMode": "connected",
       "percentage": false,
+      "pluginVersion": "7.1.3",
       "pointradius": 1,
       "points": false,
       "renderer": "flot",
@@ -501,104 +744,362 @@
       }
     },
     {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Prometheus",
-      "decimals": null,
-      "editable": true,
-      "error": false,
-      "fill": 0,
-      "grid": {},
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": null
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
       "gridPos": {
-        "h": 7,
-        "w": 12,
+        "h": 4,
+        "w": 6,
         "x": 12,
-        "y": 17
+        "y": 25
       },
-      "id": 44,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": false,
-        "total": false,
-        "values": false
+      "id": 55,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/^Build Date$/",
+          "values": false
+        },
+        "textMode": "auto"
       },
-      "lines": true,
-      "linewidth": 2,
-      "links": [],
-      "nullPointMode": "connected",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
+      "pluginVersion": "7.1.3",
+      "repeat": null,
       "targets": [
         {
-          "expr": "etcd_debugging_mvcc_db_total_size_in_bytes",
-          "format": "time_series",
+          "expr": "sensu_go_build_info",
+          "format": "table",
           "hide": false,
           "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "{{instance}} DB Size",
-          "metric": "",
-          "refId": "A",
-          "step": 120
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
         }
       ],
-      "thresholds": [],
       "timeFrom": null,
-      "timeRegions": [],
       "timeShift": null,
-      "title": "Etcd DB Size",
-      "tooltip": {
-        "msResolution": false,
-        "shared": true,
-        "sort": 0,
-        "value_type": "cumulative"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
+      "title": "Build Date",
+      "transformations": [
         {
-          "format": "bytes",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Time": true,
+              "Value": true,
+              "__name__": true,
+              "instance": true,
+              "job": true
+            },
+            "indexByName": {},
+            "renameByName": {
+              "Time": "",
+              "__name__": "",
+              "builddate": "Build Date",
+              "buildsha": "Build SHA",
+              "goversion": "Go Version",
+              "instance": "",
+              "job": "",
+              "version": "Sensu Go Version"
+            }
+          }
         }
       ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
+      "type": "stat"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": null
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 18,
+        "y": 25
+      },
+      "id": 58,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/^Build SHA$/",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.1.3",
+      "targets": [
+        {
+          "expr": "sensu_go_build_info",
+          "format": "table",
+          "hide": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Build SHA",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Time": true,
+              "Value": true,
+              "__name__": true,
+              "instance": true,
+              "job": true
+            },
+            "indexByName": {},
+            "renameByName": {
+              "Time": "",
+              "__name__": "",
+              "builddate": "Build Date",
+              "buildsha": "Build SHA",
+              "goversion": "Go Version",
+              "instance": "",
+              "job": "",
+              "version": "Sensu Go Version"
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": null
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 6,
+        "x": 12,
+        "y": 29
+      },
+      "id": 57,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/^Go Version$/",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.1.3",
+      "targets": [
+        {
+          "expr": "sensu_go_build_info",
+          "format": "table",
+          "hide": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Go Version",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Time": true,
+              "Value": true,
+              "__name__": true,
+              "instance": true,
+              "job": true
+            },
+            "indexByName": {},
+            "renameByName": {
+              "Time": "",
+              "__name__": "",
+              "builddate": "Build Date",
+              "buildsha": "Build SHA",
+              "goversion": "Go Version",
+              "instance": "",
+              "job": "",
+              "version": "Sensu Go Version"
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": null
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 6,
+        "x": 18,
+        "y": 29
+      },
+      "id": 56,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/^Sensu Go Version$/",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.1.3",
+      "targets": [
+        {
+          "expr": "sensu_go_build_info",
+          "format": "table",
+          "hide": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Sensu Version",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Time": true,
+              "Value": true,
+              "__name__": true,
+              "instance": true,
+              "job": true
+            },
+            "indexByName": {},
+            "renameByName": {
+              "Time": "",
+              "__name__": "",
+              "builddate": "Build Date",
+              "buildsha": "Build SHA",
+              "goversion": "Go Version",
+              "instance": "",
+              "job": "",
+              "version": "Sensu Go Version"
+            }
+          }
+        }
+      ],
+      "type": "stat"
     },
     {
       "collapsed": false,
+      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 24
+        "y": 32
       },
       "id": 36,
       "panels": [],
@@ -628,13 +1129,21 @@
       "datasource": "Prometheus",
       "decimals": 2,
       "description": "Basic CPU info",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 4,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 9,
         "x": 0,
-        "y": 25
+        "y": 33
       },
+      "hiddenSeries": false,
       "id": 40,
       "legend": {
         "alignAsTable": false,
@@ -656,6 +1165,7 @@
       "maxPerRow": 6,
       "nullPointMode": "null",
       "percentage": true,
+      "pluginVersion": "7.1.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -805,13 +1315,21 @@
       "datasource": "Prometheus",
       "decimals": 2,
       "description": "Basic memory usage",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 4,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 7,
         "x": 9,
-        "y": 25
+        "y": 33
       },
+      "hiddenSeries": false,
       "id": 42,
       "legend": {
         "alignAsTable": false,
@@ -831,6 +1349,7 @@
       "maxPerRow": 6,
       "nullPointMode": "null",
       "percentage": false,
+      "pluginVersion": "7.1.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -952,13 +1471,21 @@
       "datasource": "Prometheus",
       "editable": true,
       "error": false,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 0,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 8,
         "x": 16,
-        "y": 25
+        "y": 33
       },
+      "hiddenSeries": false,
       "id": 38,
       "legend": {
         "avg": false,
@@ -974,6 +1501,7 @@
       "links": [],
       "nullPointMode": "connected",
       "percentage": false,
+      "pluginVersion": "7.1.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1036,11 +1564,12 @@
     },
     {
       "collapsed": false,
+      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 32
+        "y": 40
       },
       "id": 12,
       "panels": [],
@@ -1055,13 +1584,21 @@
       "datasource": "Prometheus",
       "editable": true,
       "error": false,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 5,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 6,
         "x": 0,
-        "y": 33
+        "y": 41
       },
+      "hiddenSeries": false,
       "id": 4,
       "legend": {
         "avg": false,
@@ -1077,6 +1614,7 @@
       "links": [],
       "nullPointMode": "connected",
       "percentage": false,
+      "pluginVersion": "7.1.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1145,13 +1683,21 @@
       "datasource": "Prometheus",
       "editable": true,
       "error": false,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 5,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 6,
         "x": 6,
-        "y": 33
+        "y": 41
       },
+      "hiddenSeries": false,
       "id": 6,
       "legend": {
         "avg": false,
@@ -1167,6 +1713,7 @@
       "links": [],
       "nullPointMode": "connected",
       "percentage": false,
+      "pluginVersion": "7.1.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1235,13 +1782,21 @@
       "datasource": "Prometheus",
       "editable": true,
       "error": false,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 0,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 6,
         "x": 12,
-        "y": 33
+        "y": 41
       },
+      "hiddenSeries": false,
       "id": 8,
       "legend": {
         "avg": false,
@@ -1257,6 +1812,7 @@
       "links": [],
       "nullPointMode": "connected",
       "percentage": false,
+      "pluginVersion": "7.1.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1326,14 +1882,22 @@
       "decimals": null,
       "editable": true,
       "error": false,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 0,
+      "fillGradient": 0,
       "grid": {},
       "gridPos": {
         "h": 7,
         "w": 6,
         "x": 18,
-        "y": 33
+        "y": 41
       },
+      "hiddenSeries": false,
       "id": 10,
       "legend": {
         "avg": false,
@@ -1349,6 +1913,7 @@
       "links": [],
       "nullPointMode": "connected",
       "percentage": false,
+      "pluginVersion": "7.1.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1440,13 +2005,21 @@
       "dashes": false,
       "datasource": "Prometheus",
       "description": "Basic network info per interface",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 4,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 40
+        "y": 48
       },
+      "hiddenSeries": false,
       "id": 32,
       "legend": {
         "alignAsTable": false,
@@ -1468,6 +2041,7 @@
       "links": [],
       "nullPointMode": "null",
       "percentage": false,
+      "pluginVersion": "7.1.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1575,13 +2149,21 @@
       "datasource": "Prometheus",
       "editable": true,
       "error": false,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 0,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 40
+        "y": 48
       },
+      "hiddenSeries": false,
       "id": 46,
       "legend": {
         "avg": false,
@@ -1597,6 +2179,7 @@
       "links": [],
       "nullPointMode": "connected",
       "percentage": false,
+      "pluginVersion": "7.1.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1668,11 +2251,12 @@
     },
     {
       "collapsed": false,
+      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 47
+        "y": 55
       },
       "id": 16,
       "panels": [],
@@ -1686,13 +2270,21 @@
       "dashes": false,
       "datasource": "Prometheus",
       "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 2,
+      "fillGradient": 0,
       "gridPos": {
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 48
+        "y": 56
       },
+      "hiddenSeries": false,
       "id": 22,
       "legend": {
         "alignAsTable": true,
@@ -1712,6 +2304,7 @@
       "maxPerRow": 6,
       "nullPointMode": "null",
       "percentage": false,
+      "pluginVersion": "7.1.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1871,13 +2464,21 @@
       "dashes": false,
       "datasource": "Prometheus",
       "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 2,
+      "fillGradient": 0,
       "gridPos": {
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 48
+        "y": 56
       },
+      "hiddenSeries": false,
       "id": 24,
       "legend": {
         "alignAsTable": true,
@@ -1897,6 +2498,7 @@
       "maxPerRow": 6,
       "nullPointMode": "null",
       "percentage": false,
+      "pluginVersion": "7.1.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2053,13 +2655,22 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 58
+        "y": 66
       },
+      "hiddenSeries": false,
       "id": 51,
       "legend": {
         "alignAsTable": true,
@@ -2076,6 +2687,7 @@
       "links": [],
       "nullPointMode": "null",
       "percentage": false,
+      "pluginVersion": "7.1.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2085,28 +2697,28 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sensu_go_wizard_bus{topic=\"sensu:event-raw\",instance=~\"$node:2379\"}",
+          "expr": "sensu_go_wizard_bus{topic=\"sensu:event-raw\",instance=\"192.168.1.15:2379\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "sensu:event-raw",
           "refId": "A"
         },
         {
-          "expr": "sensu_go_wizard_bus{topic=\"sensu:event\",instance=~\"$node:2379\"}",
+          "expr": "sensu_go_wizard_bus{topic=\"sensu:event\",instance=\"192.168.1.15:2379\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "sensu:event",
           "refId": "B"
         },
         {
-          "expr": "sensu_go_wizard_bus{topic=\"sensu:keepalive\",instance=~\"$node:2379\"}",
+          "expr": "sensu_go_wizard_bus{topic=\"sensu:keepalive\",instance=\"192.168.1.15:2379\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "sensu:keepalive",
           "refId": "C"
         },
         {
-          "expr": "sensu_go_wizard_bus{topic=\"sensu:check\",instance=~\"$node:2379\"}",
+          "expr": "sensu_go_wizard_bus{topic=\"sensu:check\",instance=\"192.168.1.15:2379\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "sensu:check",
@@ -2155,8 +2767,8 @@
       }
     }
   ],
-  "refresh": "10s",
-  "schemaVersion": 18,
+  "refresh": "5s",
+  "schemaVersion": 26,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -2164,6 +2776,7 @@
       {
         "allValue": null,
         "current": {
+          "selected": false,
           "text": "node",
           "value": "node"
         },
@@ -2189,8 +2802,9 @@
       {
         "allValue": null,
         "current": {
-          "text": "192.168.1.14",
-          "value": "192.168.1.14"
+          "selected": true,
+          "text": "192.168.1.15",
+          "value": "192.168.1.15"
         },
         "datasource": "Prometheus",
         "definition": "label_values(node_exporter_build_info{job=~\"$job\"}, instance)",
@@ -2214,6 +2828,7 @@
       {
         "allValue": null,
         "current": {
+          "selected": false,
           "text": "9100",
           "value": "9100"
         },
@@ -2276,5 +2891,5 @@
   "timezone": "",
   "title": "Sensu Benchmarks",
   "uid": "m0mQKJiWz",
-  "version": 3
+  "version": 6
 }
