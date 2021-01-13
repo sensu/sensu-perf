@@ -162,7 +162,7 @@ Wake the Testbed from the SSH jump host:
 Start up Postgres and do some cleanup:
 
 ```
-ssh postgres
+ssh root@postgres
 
 systemctl start postgresql
 
@@ -172,12 +172,13 @@ systemctl start postgres-exporter.service
 
 systemctl status postgres-exporter.service
 
-psql 'user=sensu password=P@ssw0rd!'
+psql -U postgres
 
-DROP TABLE events;
-DROP TABLE migration_version;
-
+DROP DATABASE sensu;
 VACUUM FULL;
+
+CREATE DATABASE sensu;
+GRANT ALL PRIVILEGES ON DATABASE sensu TO sensu;
 
 \q
 ```
@@ -185,7 +186,7 @@ VACUUM FULL;
 Wipe Sensu Backends and start them up **(do these steps on all three backends)**:
 
 ```
-ssh backend1
+ssh root@backend1
 
 rm -rf /mnt/data/sensu/sensu-backend
 ```
@@ -205,7 +206,7 @@ systemctl status sensu-backend.service
 Initialize the cluster admin user and configure the Enterprise license and Postgres Event Store (from backend1):
 
 ```
-ssh backend1
+ssh root@backend1
 
 sensu-backend init --cluster-admin-username admin --cluster-admin-password P@ssw0rd!
 
@@ -220,7 +221,7 @@ In either separate SSH sessions, tmux, or screen panes, on agents1 run all of th
 each one in a seperate instance:
 
 ```
-ssh agents1
+ssh root@agents1
 
 cd sensu-perf/tests/3-backends-40k-agents-4-subs-pg/
 
@@ -252,7 +253,7 @@ etcd has had a chance to "warm up", it's generally safe to be more
 aggresive with check creation._
 
 ```
-ssh backend1
+ssh root@backend1
 
 cd sensu-perf/tests/3-backends-40k-agents-4-subs-pg/checks
 
