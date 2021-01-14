@@ -4,4 +4,4 @@ metadata:
   name: postgres
 spec:
   dsn: "user=sensu password=P@ssw0rd! host=192.168.2.4 sslmode=disable"
-  pool_size: 8
+  pool_size: 30
