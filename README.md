@@ -193,7 +193,8 @@ rm -rf /mnt/data/sensu/sensu-backend
 
 If the version you're testing is not installed:
 ```
-./backend_upgrade.sh $SHA $BRANCH
+export SENSU_PKG_VERSION="6.2.5-4040"
+dnf install -y sensu-go-backend-$SENSU_PKG_VERSION sensu-go-cli-$SENSU_PKG_VERSION
 ```
 
 If the version you're testing is already installed:
