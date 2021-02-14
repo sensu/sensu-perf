@@ -4,4 +4,5 @@
 -subscriptions large_cluster_test_4 \
 -count 5000 \
 -keepalive-interval 60 \
--keepalive-timeout 360
+-keepalive-timeout 360 \
+-pprof-port 6063
