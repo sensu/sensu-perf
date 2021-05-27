@@ -114,7 +114,7 @@ shared_buffers = 10GB
 
 maintenance_work_mem = 1GB
 
-vacuum_cost_delay = 10ms
+vacuum_cost_delay = 0
 vacuum_cost_limit = 10000
 
 bgwriter_delay = 50ms
@@ -134,7 +134,8 @@ min_wal_size = 1GB
 
 checkpoint_completion_target = 0.9
 
-autovacuum_naptime = 10s
+autovacuum_max_workers = 5
+autovacuum_naptime = 1s
 autovacuum_vacuum_scale_factor = 0.05
 autovacuum_analyze_scale_factor = 0.025
 ```
