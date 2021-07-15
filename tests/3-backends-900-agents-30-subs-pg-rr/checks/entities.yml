@@ -1,0 +1,90 @@
+type: Entity
+api_version: core/v2
+metadata:
+  name: entity1
+  namespace: default
+spec:
+  entity_class: proxy
+  subscriptions:
+  - round-robin
+type: Entity
+api_version: core/v2
+metadata:
+  name: entity2
+  namespace: default
+spec:
+  entity_class: proxy
+  subscriptions:
+  - round-robin
+type: Entity
+api_version: core/v2
+metadata:
+  name: entity3
+  namespace: default
+spec:
+  entity_class: proxy
+  subscriptions:
+  - round-robin
+type: Entity
+api_version: core/v2
+metadata:
+  name: entity4
+  namespace: default
+spec:
+  entity_class: proxy
+  subscriptions:
+  - round-robin
+type: Entity
+api_version: core/v2
+metadata:
+  name: entity5
+  namespace: default
+spec:
+  entity_class: proxy
+  subscriptions:
+  - round-robin
+type: Entity
+api_version: core/v2
+metadata:
+  name: entity6
+  namespace: default
+spec:
+  entity_class: proxy
+  subscriptions:
+  - round-robin
+type: Entity
+api_version: core/v2
+metadata:
+  name: entity7
+  namespace: default
+spec:
+  entity_class: proxy
+  subscriptions:
+  - round-robin
+type: Entity
+api_version: core/v2
+metadata:
+  name: entity8
+  namespace: default
+spec:
+  entity_class: proxy
+  subscriptions:
+  - round-robin
+type: Entity
+api_version: core/v2
+metadata:
+  name: entity9
+  namespace: default
+spec:
+  entity_class: proxy
+  subscriptions:
+  - round-robin
+type: Entity
+api_version: core/v2
+metadata:
+  name: entity10
+  namespace: default
+spec:
+  entity_class: proxy
+  subscriptions:
+  - round-robin
