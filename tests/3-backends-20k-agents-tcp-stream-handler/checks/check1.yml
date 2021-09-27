@@ -23,3 +23,7 @@ spec:
   - large_cluster_test_1
   timeout: 0
   ttl: 0
+  pipelines:
+  - name: tcp-stream-pipeline
+    type: Pipeline
+    api_version: core/v2

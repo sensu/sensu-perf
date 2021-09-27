@@ -27,3 +27,7 @@ spec:
   - name: tcp-stream-pipeline
     type: Pipeline
     api_version: core/v2
+  pipelines:
+  - name: tcp-stream-pipeline
+    type: Pipeline
+    api_version: core/v2
