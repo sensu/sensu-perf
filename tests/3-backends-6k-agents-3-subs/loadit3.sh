@@ -5,4 +5,6 @@
 -count 2000 \
 -keepalive-interval 60 \
 -keepalive-timeout 360 \
--pprof-port 6062
+-pprof-port 6062 \
+-prom "" \
+-base-entity-name "loadit-3-agent"
