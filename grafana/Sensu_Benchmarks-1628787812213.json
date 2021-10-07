@@ -52,7 +52,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1628787644705,
+  "iteration": 1633558311293,
   "links": [],
   "panels": [
     {
@@ -383,9 +383,17 @@
       "targets": [
         {
           "expr": "sum(go_memstats_gc_cpu_fraction{job=\"etcd\"}) by (instance)",
+          "hide": true,
           "interval": "",
           "legendFormat": "",
           "refId": "A"
+        },
+        {
+          "expr": "go_memstats_gc_cpu_fraction",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "B"
         }
       ],
       "thresholds": [],
@@ -4146,7 +4154,7 @@
     ]
   },
   "time": {
-    "from": "now-15m",
+    "from": "now-24h",
     "to": "now"
   },
   "timepicker": {
@@ -4175,7 +4183,7 @@
     ]
   },
   "timezone": "",
-  "title": "Sensu Benchmarks",
+  "title": "Sensu Benchmarks (>= 6.4.0)",
   "uid": "YioGepRRz",
-  "version": 29
+  "version": 31
 }
