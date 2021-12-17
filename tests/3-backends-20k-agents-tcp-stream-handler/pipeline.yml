@@ -1,0 +1,21 @@
+api_version: core/v2
+type: Pipeline
+metadata:
+  namespace: default
+  name: tcp-stream-pipeline
+spec:
+  workflows:
+  - name: tcp-stream-workflow
+    handler:
+      name: tcp-stream-handler
+      api_version: pipeline/v1
+      type: TCPStreamHandler
+---
+api_version: pipeline/v1
+type: TCPStreamHandler
+metadata:
+  name: tcp-stream-handler
+  namespace: default
+spec:
+  address: 127.0.0.1:9999
+  max_connections: 100
