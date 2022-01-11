@@ -5,7 +5,7 @@ for i in {0..1000}; do
 type: CheckConfig
 api_version: core/v2
 metadata:
-  name: check${i}
+  name: check`expr $i + 1`
   namespace: default
 spec:
   check_hooks: null
@@ -28,7 +28,7 @@ spec:
   stdin: false
   subdue: null
   subscriptions:
-  - large_cluster_test_`expr $i % 4`
+  - large_cluster_test_`expr $i % 4 + 1`
   timeout: 0
   ttl: 0
 EOF
