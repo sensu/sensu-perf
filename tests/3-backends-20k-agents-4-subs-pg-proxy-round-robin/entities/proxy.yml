@@ -1,0 +1,599 @@
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch1
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch2
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch3
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch4
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch5
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch6
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch7
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch8
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch9
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch10
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch11
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch12
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch13
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch14
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch15
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch16
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch17
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch18
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch19
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch20
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch21
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch22
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch23
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch24
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch25
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch26
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch27
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch28
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch29
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch30
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch31
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch32
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch33
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch34
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch35
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch36
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch37
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch38
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch39
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch40
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch41
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch42
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch43
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch44
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch45
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch46
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch47
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch48
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch49
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: switch50
+  namespace: default
+  labels:
+    proxy_type: switch
+spec:
+  entity_class: proxy
+  subscriptions:
+  - switches
