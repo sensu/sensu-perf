@@ -1,7 +1,7 @@
 type: CheckConfig
 api_version: core/v2
 metadata:
-  name: check30
+  name: check${i}
   namespace: default
 spec:
   check_hooks: null
@@ -24,6 +24,6 @@ spec:
   stdin: false
   subdue: null
   subscriptions:
-  - large_cluster_test_2
+  - large_cluster_test_`expr $i % 4`
   timeout: 0
   ttl: 0
