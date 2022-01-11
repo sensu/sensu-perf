@@ -20,7 +20,6 @@ spec:
     entity_attributes:
     - "entity.entity_class == 'proxy'"
     - "entity.labels.proxy_type == 'switch'"
-    splay: true
   runtime_assets: null
   stdin: false
   subdue: null
