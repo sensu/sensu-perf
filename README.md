@@ -294,7 +294,7 @@ Shutdown the Testbed from the SSH jump host:
 
 ## Capturing the results
 
-1. Open the [Google Drive Folder for Performance Testing](https://drive.google.com/drive/u/1/folders/1MxzFG2a5quvu4GlqAuvBDY1X4kM20rQ4)
+1. Open the [Google Drive Folder for Performance Testing](https://drive.google.com/drive/folders/1A2umr7cX5d-Te3f9rKB28OxctZXI27_g?usp=sharing)
 1. Update the summary Google Sheet document with the results (for both Postgres & etcd) with the maximum number of total processed events per second, during which Sensu was stable
 1. Create a new folder for the release and upload screenshots (for both Postgres & etcd)
 1. [Take a snapshot](https://grafana.com/docs/grafana/latest/reference/share_dashboard/#dashboard-snapshot) of the Grafana dashboard and save it under the same name as the Google Drive folder.
