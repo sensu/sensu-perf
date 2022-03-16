@@ -76,7 +76,7 @@
           "refId": "A"
         },
         {
-          "expr": "sum(rate(sensu_go_events_processed{status=\"failure\"}[1m])) by (instance)",
+          "expr": "sum(rate(sensu_go_events_processed{status=\"error\"}[1m])) by (instance)",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "",
