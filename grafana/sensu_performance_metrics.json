@@ -2085,28 +2085,28 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sensu_go_wizard_bus{topic=\"sensu:event-raw\",instance=\"192.168.1.15:2379\"}",
+          "expr": "sensu_go_wizard_bus{topic=\"sensu:event-raw\",instance=\"10.0.42.15:2379\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "sensu:event-raw",
           "refId": "A"
         },
         {
-          "expr": "sensu_go_wizard_bus{topic=\"sensu:event\",instance=\"192.168.1.15:2379\"}",
+          "expr": "sensu_go_wizard_bus{topic=\"sensu:event\",instance=\"10.0.42.15:2379\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "sensu:event",
           "refId": "B"
         },
         {
-          "expr": "sensu_go_wizard_bus{topic=\"sensu:keepalive\",instance=\"192.168.1.15:2379\"}",
+          "expr": "sensu_go_wizard_bus{topic=\"sensu:keepalive\",instance=\"10.0.42.15:2379\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "sensu:keepalive",
           "refId": "C"
         },
         {
-          "expr": "sensu_go_wizard_bus{topic=\"sensu:check\",instance=\"192.168.1.15:2379\"}",
+          "expr": "sensu_go_wizard_bus{topic=\"sensu:check\",instance=\"10.0.42.15:2379\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "sensu:check",
@@ -2189,8 +2189,8 @@
       {
         "allValue": null,
         "current": {
-          "text": "192.168.1.14",
-          "value": "192.168.1.14"
+          "text": "10.0.42.14",
+          "value": "10.0.42.14"
         },
         "datasource": "Prometheus",
         "definition": "label_values(node_exporter_build_info{job=~\"$job\"}, instance)",
