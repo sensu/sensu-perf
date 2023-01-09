@@ -20960,8 +20960,8 @@
       {
         "allValue": null,
         "current": {
-          "text": "192.168.1.18",
-          "value": "192.168.1.18"
+          "text": "10.0.42.18",
+          "value": "10.0.42.18"
         },
         "datasource": "Prometheus",
         "definition": "",
