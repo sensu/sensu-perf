@@ -2085,28 +2085,28 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sensu_go_wizard_bus{topic=\"sensu:event-raw\",instance=\"10.0.42.15:2379\"}",
+          "expr": "sensu_go_wizard_bus{topic=\"sensu:event-raw\",instance=\"backend1:2379\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "sensu:event-raw",
           "refId": "A"
         },
         {
-          "expr": "sensu_go_wizard_bus{topic=\"sensu:event\",instance=\"10.0.42.15:2379\"}",
+          "expr": "sensu_go_wizard_bus{topic=\"sensu:event\",instance=\"backend1:2379\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "sensu:event",
           "refId": "B"
         },
         {
-          "expr": "sensu_go_wizard_bus{topic=\"sensu:keepalive\",instance=\"10.0.42.15:2379\"}",
+          "expr": "sensu_go_wizard_bus{topic=\"sensu:keepalive\",instance=\"backend1:2379\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "sensu:keepalive",
           "refId": "C"
         },
         {
-          "expr": "sensu_go_wizard_bus{topic=\"sensu:check\",instance=\"10.0.42.15:2379\"}",
+          "expr": "sensu_go_wizard_bus{topic=\"sensu:check\",instance=\"backend1:2379\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "sensu:check",
